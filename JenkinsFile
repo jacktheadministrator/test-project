@@ -20,6 +20,12 @@ pipeline {
                 sh 'uname -a'
             }
         }
+        stage('apt') {
+            steps {
+                echo 'apt'
+                sh 'apt'
+            }
+        }        
         stage('yum list installed') {
             steps {
                 echo 'yum list installed'
