@@ -7,11 +7,5 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('Run test') {
-            steps {
-                echo 'Running test.sh'
-                sh ./test.sh
-            }
-        }
     }
 }
