@@ -20,10 +20,10 @@ pipeline {
                 sh 'uname -a'
             }
         }
-        stage('su -') {
+        stage('su - root') {
             steps {
-                echo 'su -'
-                sh 'su -'
+                echo 'su - root'
+                sh 'su - root'
             }
         }
         stage('apt-get update') {
