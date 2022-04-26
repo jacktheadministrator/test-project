@@ -26,16 +26,28 @@ pipeline {
                 sh 'terraform --version'
             }
         }
-        stage('apt-get update') {
+        stage('pull down terraform code from repo') {
             steps {
-                echo 'apt-get update'
-                sh 'apt-get update'
+                echo 'pull down terraform code from repo'
+                sh 'pull down terraform code from repo'
             }
         }        
-        stage('yum list installed') {
+        stage('terraform init') {
             steps {
-                echo 'yum list installed'
-                sh 'yum list installed'
+                echo 'terraform init'
+                sh 'terraform init'
+            }
+        }
+        stage('terraform plan') {
+            steps {
+                echo 'terraform plan'
+                sh 'terraform plan'
+            }
+        }
+        stage('terraform apply') {
+            steps {
+                echo 'terraform apply'
+                sh 'terraform apply'
             }
         }
     }
