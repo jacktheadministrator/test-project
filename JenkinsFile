@@ -20,10 +20,15 @@ pipeline {
                 sh 'uname -a'
             }
         }
-        stage('sudo apt-get update') {
+        stage('su -') {
             steps {
-                echo 'sudo apt-get update'
-                sh 'sudo apt-get update'
+                echo 'su -'
+                sh 'su -'
+            }
+        }        stage('apt-get update') {
+            steps {
+                echo 'apt-get update'
+                sh 'apt-get update'
             }
         }        
         stage('yum list installed') {
