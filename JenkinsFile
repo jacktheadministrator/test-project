@@ -20,5 +20,11 @@ pipeline {
                 sh 'uname -a'
             }
         }
+        stage('yum list installed') {
+            steps {
+                echo 'yum list installed'
+                sh 'yum list installed'
+            }
+        }
     }
 }
