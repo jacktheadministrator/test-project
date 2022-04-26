@@ -11,7 +11,7 @@ pipeline {
             steps {
                 echo 'Running test.sh'
                 chmod 755/tmp
-                chmod 755 ./test.sh
+
                 sh ./test.sh
             }
         }
