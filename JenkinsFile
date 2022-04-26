@@ -14,11 +14,10 @@ pipeline {
                 sh './test.sh'
             }
         }
-        stage('Terraform --version') {
+        stage('uname -a') {
             steps {
-                echo 'Running terraform --version'
-                sh "chmod +x -R ${env.WORKSPACE}"
-                sh 'terraform --version'
+                echo 'Running uname -a'
+                sh 'uname -a'
             }
         }
     }
