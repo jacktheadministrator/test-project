@@ -25,7 +25,8 @@ pipeline {
                 echo 'su -'
                 sh 'su -'
             }
-        }        stage('apt-get update') {
+        }
+        stage('apt-get update') {
             steps {
                 echo 'apt-get update'
                 sh 'apt-get update'
