@@ -10,7 +10,6 @@ pipeline {
         stage('Run test') {
             steps {
                 echo 'Running test.sh'
-                chmod 755/tmp
                 sh './test.sh'
             }
         }
