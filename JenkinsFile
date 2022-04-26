@@ -29,25 +29,25 @@ pipeline {
         stage('pull down terraform code from repo') {
             steps {
                 echo 'pull down terraform code from repo'
-                sh 'pull down terraform code from repo'
+                //sh 'pull down terraform code from repo'
             }
         }        
         stage('terraform init') {
             steps {
                 echo 'terraform init'
-                sh 'terraform init'
+                //sh 'terraform init'
             }
         }
         stage('terraform plan') {
             steps {
                 echo 'terraform plan'
-                sh 'terraform plan'
+                //sh 'terraform plan'
             }
         }
         stage('terraform apply') {
             steps {
                 echo 'terraform apply'
-                sh 'terraform apply'
+                //sh 'terraform apply'
             }
         }
     }
